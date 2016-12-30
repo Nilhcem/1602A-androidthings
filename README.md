@@ -1,7 +1,12 @@
 1602A LCD display driver for Android Things
 ===========================================
 
-Android Things sample app + driver for the 1602 LCD module display
+A quick port of the LiquidCrystal Arduino library for AndroidThings.
+
+This project includes a sample app + the driver.
+
+Successfully tested on a 1602A LCD module
+
 
 ## Photo
 
