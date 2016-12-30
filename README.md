@@ -1,7 +1,7 @@
 1602A LCD display driver for Android Things
 ===========================================
 
-Android Things sample app + driver for the LCD1602 LCD display
+Android Things sample app + driver for the 1602 LCD module display
 
 ## Photo
 
