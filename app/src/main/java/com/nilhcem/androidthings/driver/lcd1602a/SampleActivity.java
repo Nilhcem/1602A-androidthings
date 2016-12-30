@@ -9,7 +9,6 @@ import java.io.IOException;
 public class SampleActivity extends Activity {
 
     private static final String TAG = SampleActivity.class.getSimpleName();
-    private Lcd1602 lcd;
 
     private static final String GPIO_LCD_RS = "BCM26";
     private static final String GPIO_LCD_EN = "BCM19";
@@ -18,6 +17,8 @@ public class SampleActivity extends Activity {
     private static final String GPIO_LCD_D5 = "BCM20";
     private static final String GPIO_LCD_D6 = "BCM16";
     private static final String GPIO_LCD_D7 = "BCM12";
+
+    private Lcd1602 lcd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
