@@ -1,8 +1,10 @@
-package com.nilhcem.androidthings.driver.lcd1602a;
+package com.nilhcem.androidthings.driver.lcd1602a.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.nilhcem.androidthings.driver.lcd1602a.Lcd1602;
 
 import java.io.IOException;
 

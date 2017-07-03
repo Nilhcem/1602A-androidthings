@@ -1,16 +1,39 @@
-1602A LCD display driver for Android Things
-===========================================
+# 1602A LCD display driver for Android Things
 
-A quick port of the LiquidCrystal Arduino library for AndroidThings.
-
-This project includes a sample app + the driver.
-
-Successfully tested on a 1602A LCD module
+A port of the LiquidCrystal Arduino library for Android Things.
 
 
 ## Photo
 
 ![photo][]
+
+## Download
+
+```groovy
+dependencies {
+    compile 'com.nilhcem.androidthings:driver-lcd1602:0.0.1'
+}
+```
+
+## Usage
+
+```java
+Lcd1602 lcd = new Lcd1602(GPIO_LCD_RS, GPIO_LCD_EN, GPIO_LCD_D4, GPIO_LCD_D5, GPIO_LCD_D6, GPIO_LCD_D7);
+lcd.begin(16, 2);
+
+// load custom character to the LCD
+int[] heart = {0b00000, 0b01010, 0b11111, 0b11111, 0b11111, 0b01110, 0b00100, 0b00000};
+lcd.createChar(0, heart);
+
+lcd.clear();
+lcd.print("Hello,");
+lcd.setCursor(0, 1);
+lcd.print("Android Things!");
+lcd.write(0); // write :heart: custom character
+
+// Later on
+lcd.close();
+```
 
 ## Breadboard
 
@@ -19,23 +42,6 @@ Successfully tested on a 1602A LCD module
 ## Schematic
 
 ![schema][]
-
-
-## License
-
-```
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
 
 [photo]: https://raw.githubusercontent.com/Nilhcem/1602A-androidthings/master/assets/photo.jpeg
 [breadboard]: https://raw.githubusercontent.com/Nilhcem/1602A-androidthings/master/assets/breadboard.png
