@@ -14,6 +14,6 @@ android {
 }
 
 dependencies {
-    provided rootProject.ext.dependencies['androidthings']
-    compile project(':driver-lcd1602')
+    compileOnly rootProject.ext.dependencies['androidthings']
+    implementation project(':driver-lcd1602')
 }

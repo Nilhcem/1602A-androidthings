@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.nilhcem.androidthings.driver.lcd1602a"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nilhcem.androidthings.driver.lcd1602a">
 
     <application>
-        <uses-library android:name="com.google.android.things"/>
+        <uses-library android:name="com.google.android.things" />
     </application>
 </manifest>

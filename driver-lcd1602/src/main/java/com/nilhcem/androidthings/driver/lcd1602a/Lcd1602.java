@@ -3,7 +3,7 @@ package com.nilhcem.androidthings.driver.lcd1602a;
 import android.util.Log;
 
 import com.google.android.things.pio.Gpio;
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 
 import java.io.IOException;
 
@@ -99,23 +99,23 @@ public class Lcd1602 implements AutoCloseable {
      * </pre>
      */
     public Lcd1602(boolean fourbitmode, String rs, String rw, String enable, String d0, String d1, String d2, String d3, String d4, String d5, String d6, String d7) throws IOException {
-        PeripheralManagerService pioService = new PeripheralManagerService();
+        PeripheralManager manager = PeripheralManager.getInstance();
 
-        rsGpio = pioService.openGpio(rs);
+        rsGpio = manager.openGpio(rs);
         rsGpio.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
 
         // we can save 1 pin by not using RW. Indicate by passing null instead of pin#
         if (rw != null) {
-            rwGpio = pioService.openGpio(rw);
+            rwGpio = manager.openGpio(rw);
             rwGpio.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
         }
 
-        enableGpio = pioService.openGpio(enable);
+        enableGpio = manager.openGpio(enable);
         enableGpio.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
 
         String[] dataPins = new String[]{d0, d1, d2, d3, d4, d5, d6, d7};
         for (int i = 0; i < (fourbitmode ? 4 : 8); i++) {
-            dataGpios[i] = pioService.openGpio(dataPins[i]);
+            dataGpios[i] = manager.openGpio(dataPins[i]);
             dataGpios[i].setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
         }
 
