@@ -8,7 +8,7 @@ import com.google.android.things.pio.PeripheralManager;
 import java.io.IOException;
 
 /**
- * Inspired from `https://github.com/arduino/Arduino/tree/master/libraries/LiquidCrystal/src`
+ * Inspired from {@code https://github.com/arduino/Arduino/tree/master/libraries/LiquidCrystal/src}
  */
 public class Lcd1602 implements AutoCloseable {
 
