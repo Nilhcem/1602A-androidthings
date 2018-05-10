@@ -11,7 +11,7 @@ A port of the LiquidCrystal Arduino library for Android Things.
 
 ```groovy
 dependencies {
-    compile 'com.nilhcem.androidthings:driver-lcd1602:0.0.2'
+    compile 'com.nilhcem.androidthings:driver-lcd1602:0.0.3'
 }
 ```
 

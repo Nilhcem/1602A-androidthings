@@ -28,7 +28,7 @@ publish {
     userOrg = 'nilhcem'
     groupId = 'com.nilhcem.androidthings'
     artifactId = 'driver-lcd1602'
-    publishVersion = '0.0.2'
+    publishVersion = '0.0.3'
     desc = 'Android Things driver for the 1602 LCD display module.'
     website = 'https://github.com/Nilhcem/1602A-androidthings'
 }
