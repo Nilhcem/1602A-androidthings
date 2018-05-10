@@ -1,0 +1,24 @@
+{
+  "title": "LCD1602",
+  "category": "LCD Display",
+  "samples": [
+    "https://github.com/Nilhcem/1602A-androidthings/tree/master/sample"
+  ],
+  "published-maven": {
+    "maven-url": "https://jcenter.bintray.com",
+    "groupid": "com.nilhcem.androidthings",
+    "artifactid": "driver-lcd1602"
+  },
+  "compatible-with": [
+    {
+      "title": "Basic 16x2 Character LCD",
+      "photo": "https://cdn.sparkfun.com/assets/parts/1/9/7/00255-action.jpg",
+      "url": "https://www.sparkfun.com/products/255"
+    },
+    {
+      "title": "Standard LCD 16x2",
+      "photo": "https://cdn-shop.adafruit.com/970x728/181-02.jpg",
+      "url": "https://www.adafruit.com/product/181"
+    }
+  ]
+}
